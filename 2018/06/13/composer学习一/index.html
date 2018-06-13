@@ -115,7 +115,7 @@
 <meta property="og:site_name" content="哈哈哈哈">
 <meta property="og:description" content="源视频，请科学上网 一. 什么是Hyperledger Composer官方定义：Hyperledger Composer is an extensive, open development toolset and framework to make developing blockchain applications easier. Our primary goal is to accelera">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-13T06:52:46.899Z">
+<meta property="og:updated_time" content="2018-06-13T07:21:17.277Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hyperledger composer学习一">
 <meta name="twitter:description" content="源视频，请科学上网 一. 什么是Hyperledger Composer官方定义：Hyperledger Composer is an extensive, open development toolset and framework to make developing blockchain applications easier. Our primary goal is to accelera">
@@ -326,7 +326,7 @@
                 
               
 
-              <time title="Created: 2018-06-13 11:24:36 / Modified: 14:52:46" itemprop="dateCreated datePublished" datetime="2018-06-13T11:24:36+08:00">2018-06-13</time>
+              <time title="Created: 2018-06-13 11:24:36 / Modified: 15:21:17" itemprop="dateCreated datePublished" datetime="2018-06-13T11:24:36+08:00">2018-06-13</time>
             
 
             
@@ -390,6 +390,9 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#到工作目录</span></span><br><span class="line"><span class="built_in">cd</span> workdir</span><br><span class="line">mkdir ~/fabric-dev-servers &amp;&amp; <span class="built_in">cd</span> ~/fabric-dev-servers</span><br><span class="line"></span><br><span class="line">curl -O https://raw.githubusercontent.com/hyperledger/composer-tools/master/packages/fabric-dev-servers/fabric-dev-servers.tar.gz</span><br><span class="line">tar -xvf fabric-dev-servers.tar.gz</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> ~/fabric-dev-servers</span><br><span class="line">./downloadFabric.sh</span><br></pre></td></tr></table></figure>
 <p>相关操作</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/fabric-dev-servers</span><br><span class="line"><span class="comment">#启动fabric网络</span></span><br><span class="line">./startFabric.sh</span><br><span class="line"><span class="comment">#创建admin访问卡</span></span><br><span class="line">./createPeerAdminCard.sh</span><br><span class="line"><span class="comment">#开启playground</span></span><br><span class="line">composer-playground</span><br></pre></td></tr></table></figure>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意: "></a><strong>注意: </strong></h3><p>如果是部署阿里云服务器，运行fabric网络会有问题，解决方案:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#打开域名解析文件</span></span><br><span class="line">vi /etc/resolv.conf</span><br><span class="line"><span class="comment">#注释行</span></span><br><span class="line"><span class="comment">#options timeout:2 attempts:3 rotate single-request-reopen</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -538,7 +541,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-什么是Hyperledger-Composer"><span class="nav-number">1.</span> <span class="nav-text">一. 什么是Hyperledger Composer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-Hyperledger-Composer安装"><span class="nav-number">2.</span> <span class="nav-text">二. Hyperledger Composer安装</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-什么是Hyperledger-Composer"><span class="nav-number">1.</span> <span class="nav-text">一. 什么是Hyperledger Composer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-Hyperledger-Composer安装"><span class="nav-number">2.</span> <span class="nav-text">二. Hyperledger Composer安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-number">2.1.</span> <span class="nav-text">注意: </span></a></li></ol></li></ol></div>
             
 
           </div>
