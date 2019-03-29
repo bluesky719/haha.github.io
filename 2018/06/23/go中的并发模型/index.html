@@ -108,24 +108,24 @@
 
 
 
-  <meta name="description" content="源视频，请科学上网 一. 什么是Hyperledger Composer官方定义：Hyperledger Composer is an extensive, open development toolset and framework to make developing blockchain applications easier. Our primary goal is to accelera">
+  <meta name="description" content="理论基础CSP模型 每个进程按照串形方式编码 进程间的数据通过channel来通讯，不共享  go中并发工具集合go routineschannels源视频地址">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hyperledger composer学习一">
-<meta property="og:url" content="http://blog.jinchen.mobi/2018/06/13/composer学习一/index.html">
+<meta property="og:title" content="go中的并发模型">
+<meta property="og:url" content="http://blog.jinchen.mobi/2018/06/23/go中的并发模型/index.html">
 <meta property="og:site_name" content="哈哈哈哈">
-<meta property="og:description" content="源视频，请科学上网 一. 什么是Hyperledger Composer官方定义：Hyperledger Composer is an extensive, open development toolset and framework to make developing blockchain applications easier. Our primary goal is to accelera">
+<meta property="og:description" content="理论基础CSP模型 每个进程按照串形方式编码 进程间的数据通过channel来通讯，不共享  go中并发工具集合go routineschannels源视频地址">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-13T07:22:44.812Z">
+<meta property="og:updated_time" content="2018-06-23T07:05:39.808Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hyperledger composer学习一">
-<meta name="twitter:description" content="源视频，请科学上网 一. 什么是Hyperledger Composer官方定义：Hyperledger Composer is an extensive, open development toolset and framework to make developing blockchain applications easier. Our primary goal is to accelera">
+<meta name="twitter:title" content="go中的并发模型">
+<meta name="twitter:description" content="理论基础CSP模型 每个进程按照串形方式编码 进程间的数据通过channel来通讯，不共享  go中并发工具集合go routineschannels源视频地址">
 
 
 
 
 
 
-  <link rel="canonical" href="http://blog.jinchen.mobi/2018/06/13/composer学习一/"/>
+  <link rel="canonical" href="http://blog.jinchen.mobi/2018/06/23/go中的并发模型/"/>
 
 
 
@@ -135,7 +135,7 @@
   };
 </script>
 
-  <title>hyperledger composer学习一 | 哈哈哈哈</title>
+  <title>go中的并发模型 | 哈哈哈哈</title>
   
 
 
@@ -284,7 +284,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.jinchen.mobi/2018/06/13/composer学习一/">
+    <link itemprop="mainEntityOfPage" href="http://blog.jinchen.mobi/2018/06/23/go中的并发模型/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="fei">
@@ -301,7 +301,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">hyperledger composer学习一
+          <h1 class="post-title" itemprop="name headline">go中的并发模型
               
             
           </h1>
@@ -326,7 +326,7 @@
                 
               
 
-              <time title="Created: 2018-06-13 11:24:36 / Modified: 15:22:44" itemprop="dateCreated datePublished" datetime="2018-06-13T11:24:36+08:00">2018-06-13</time>
+              <time title="Created: 2018-06-23 14:04:59 / Modified: 15:05:39" itemprop="dateCreated datePublished" datetime="2018-06-23T14:04:59+08:00">2018-06-23</time>
             
 
             
@@ -364,34 +364,11 @@
       
 
       
-        <p><a href="https://www.youtube.com/watch?v=nS_MRqAeEbQ&amp;index=33&amp;list=WL&amp;t=0s" target="_blank" rel="noopener">源视频，请科学上网</a></p>
-<h2 id="一-什么是Hyperledger-Composer"><a href="#一-什么是Hyperledger-Composer" class="headerlink" title="一. 什么是Hyperledger Composer"></a>一. 什么是Hyperledger Composer</h2><p>官方定义：Hyperledger Composer is an extensive, open development toolset and framework to make developing blockchain applications easier. Our primary goal is to accelerate time to value, and make it easier to integrate your blockchain applications with the existing business systems. You can use Composer to rapidly develop use cases and deploy a blockchain solution in weeks rather than months. Composer allows you to model your business network and integrate existing systems and data with your blockchain applications.<br><a href="https://hyperledger.github.io/composer/latest/introduction/introduction" target="_blank" rel="noopener">原文链接</a></p>
-<p>个人理解： Hyperledger Composer是有IBM推出的，一套开源的基于 Hyperledger的区块链业务解决方案，包括开发工具集和框架。 它是业务导向的。<br>它从业务逻辑中抽象出三个基本概念：</p>
-<ol>
-<li>Assets(资产)：资产类似于传统物联网的model，是有有形或者无形的货品，服务或财产等等</li>
-<li>Participants(参与者)：整个网络的参与者</li>
-<li>Transactions(交易)：资产的操作</li>
+        <h1 id="理论基础"><a href="#理论基础" class="headerlink" title="理论基础"></a>理论基础</h1><h2 id="CSP模型"><a href="#CSP模型" class="headerlink" title="CSP模型"></a>CSP模型</h2><ol>
+<li>每个进程按照串形方式编码</li>
+<li>进程间的数据通过channel来通讯，不共享</li>
 </ol>
-<h2 id="二-Hyperledger-Composer安装"><a href="#二-Hyperledger-Composer安装" class="headerlink" title="二. Hyperledger Composer安装"></a>二. Hyperledger Composer安装</h2><p><a href="https://hyperledger.github.io/composer/latest/installing/installing-prereqs" target="_blank" rel="noopener">开发安装工具</a>：</p>
-<ul>
-<li>Git</li>
-<li>Python</li>
-<li>XCode</li>
-<li>Docker</li>
-<li>nvm</li>
-<li>Node</li>
-<li>npm</li>
-<li>VS Code：链码编辑器，记得安装Hyperledger Composer插件</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#安装composer开发工具集</span></span><br><span class="line">npm install -g composer-cli</span><br><span class="line">npm install -g generator-hyperledger-composer</span><br><span class="line">npm install -g composer-rest-server</span><br><span class="line">npm install -g yo</span><br><span class="line">npm install -g composer-playground</span><br></pre></td></tr></table></figure>
-<p>安装完毕，接下来操作Docker重置环境：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#清除docker环境</span></span><br><span class="line">docker <span class="built_in">kill</span> $(docker ps -q)</span><br><span class="line">docker rm $(docker ps -aq)</span><br><span class="line">docker rmi $(docker images dev-* -q)</span><br></pre></td></tr></table></figure>
-<p>安装fabric-tools工具集</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#到工作目录</span></span><br><span class="line"><span class="built_in">cd</span> workdir</span><br><span class="line">mkdir ~/fabric-dev-servers &amp;&amp; <span class="built_in">cd</span> ~/fabric-dev-servers</span><br><span class="line"></span><br><span class="line">curl -O https://raw.githubusercontent.com/hyperledger/composer-tools/master/packages/fabric-dev-servers/fabric-dev-servers.tar.gz</span><br><span class="line">tar -xvf fabric-dev-servers.tar.gz</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> ~/fabric-dev-servers</span><br><span class="line">./downloadFabric.sh</span><br></pre></td></tr></table></figure>
-<p>相关操作</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/fabric-dev-servers</span><br><span class="line"><span class="comment">#启动fabric网络</span></span><br><span class="line">./startFabric.sh</span><br><span class="line"><span class="comment">#创建admin访问卡</span></span><br><span class="line">./createPeerAdminCard.sh</span><br><span class="line"><span class="comment">#开启playground</span></span><br><span class="line">composer-playground</span><br></pre></td></tr></table></figure>
-<h3 id="注意"><a href="#注意" class="headerlink" title="注意: "></a><strong>注意: </strong></h3><p>如果是部署阿里云服务器，运行fabric网络会有问题，解决方案:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#打开域名解析文件</span></span><br><span class="line">vi /etc/resolv.conf</span><br><span class="line"><span class="comment">#注释行</span></span><br><span class="line"><span class="comment">#options timeout:2 attempts:3 rotate single-request-reopen</span></span><br></pre></td></tr></table></figure>
+<h1 id="go中并发工具集合"><a href="#go中并发工具集合" class="headerlink" title="go中并发工具集合"></a>go中并发工具集合</h1><h2 id="go-routines"><a href="#go-routines" class="headerlink" title="go routines"></a>go routines</h2><h2 id="channels"><a href="#channels" class="headerlink" title="channels"></a>channels</h2><p><a href="https://www.youtube.com/watch?v=YEKjSzIwAdA" target="_blank" rel="noopener">源视频地址</a></p>
 
       
     </div>
@@ -419,8 +396,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/04/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/06/13/composer学习一/" rel="next" title="hyperledger composer学习一">
+                <i class="fa fa-chevron-left"></i> hyperledger composer学习一
               </a>
             
           </div>
@@ -428,10 +405,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/23/go中的并发模型/" rel="prev" title="go中的并发模型">
-                go中的并发模型 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -545,7 +518,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-什么是Hyperledger-Composer"><span class="nav-number">1.</span> <span class="nav-text">一. 什么是Hyperledger Composer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-Hyperledger-Composer安装"><span class="nav-number">2.</span> <span class="nav-text">二. Hyperledger Composer安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-number">2.1.</span> <span class="nav-text">注意: </span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#理论基础"><span class="nav-number">1.</span> <span class="nav-text">理论基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSP模型"><span class="nav-number">1.1.</span> <span class="nav-text">CSP模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#go中并发工具集合"><span class="nav-number">2.</span> <span class="nav-text">go中并发工具集合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#go-routines"><span class="nav-number">2.1.</span> <span class="nav-text">go routines</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#channels"><span class="nav-number">2.2.</span> <span class="nav-text">channels</span></a></li></ol></li></ol></div>
             
 
           </div>
