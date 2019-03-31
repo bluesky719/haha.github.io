@@ -104,7 +104,7 @@
 <meta property="og:description" content="什么是HexoHexo是一个快速、简单的构建个人博客的框架。 如何安装Hexo要求的系统中安装了  Node.js Git  1234567891011# 1. 先安装git# 2. 安装node# 	a.先安装nvmcurl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash#		或wget">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://blog.jinchen.mobi/2019/03/31/个人blog工具-hexo使用流程/algo.png">
-<meta property="og:updated_time" content="2019-03-31T13:14:23.072Z">
+<meta property="og:updated_time" content="2019-03-31T13:32:00.298Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="个人blog工具-hexo使用流程">
 <meta name="twitter:description" content="什么是HexoHexo是一个快速、简单的构建个人博客的框架。 如何安装Hexo要求的系统中安装了  Node.js Git  1234567891011# 1. 先安装git# 2. 安装node# 	a.先安装nvmcurl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash#		或wget">
@@ -408,7 +408,7 @@
                 
               
 
-              <time title="创建时间：2019-03-31 18:30:49 / 修改时间：21:14:23" itemprop="dateCreated datePublished" datetime="2019-03-31T18:30:49+08:00">2019-03-31</time>
+              <time title="创建时间：2019-03-31 18:30:49 / 修改时间：21:32:00" itemprop="dateCreated datePublished" datetime="2019-03-31T18:30:49+08:00">2019-03-31</time>
             
 
             
@@ -477,7 +477,7 @@
 </li>
 </ol>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">哈哈哈哈</span>   	<span class="string">//博客名字</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">卓宸小屋</span>   <span class="string">//小标题可以写自己喜欢的话</span></span><br><span class="line"><span class="attr">description:</span>        <span class="string">//博客描述</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">fei</span>     		<span class="string">//作者名字</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-Hans</span>   <span class="string">//语言（此处为简体中文）</span></span><br><span class="line"><span class="attr">url:</span> <span class="attr">http://blog.jinchen.mobi</span>  <span class="string">//自己购买的域名网址（没有可不写）</span></span><br><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span> <span class="string">//这个配置会在创建文章是同时创建一个目录，把所有文章引用的资源都放到该目录下</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span>   		<span class="string">//主题的名字</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span>			<span class="string">//使用git发布</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/bluesky719/haha.github.io.git</span> <span class="string">//刚刚创建的github仓库的地址</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-<h1 id="安装并配置主题"><a href="#安装并配置主题" class="headerlink" title="安装并配置主题"></a>安装并配置主题</h1><p>所有主题<a href="https://hexo.io/themes/" target="_blank" rel="noopener">资源页</a></p>
+<h1 id="安装并配置主题"><a href="#安装并配置主题" class="headerlink" title="安装并配置主题"></a>安装并配置主题</h1><p>id(安装并配置主题)<br>所有主题<a href="https://hexo.io/themes/" target="_blank" rel="noopener">资源页</a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 博客更目录下，克隆工程</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置根目录下的 _config.yml 的字段 theme: next</span></span><br><span class="line"><span class="comment"># 配置语言</span></span><br><span class="line"><span class="built_in">cd</span> themes/next/languages &amp;&amp; rm default.yml &amp;&amp;  ln -s zh_CN.yml default.yml</span><br></pre></td></tr></table></figure>
 <p>修改主题的配置文件 themes/next/_config.yml</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">favicon:</span></span><br><span class="line">	<span class="attr">small:</span> <span class="string">/images/favicon-16x16-next.png</span></span><br><span class="line"> 	<span class="attr">medium:</span> <span class="string">/images/favicon-32x32-next.png</span></span><br><span class="line"> 	<span class="attr">apple_touch_icon:</span> <span class="string">/images/apple-touch-icon-next.png</span></span><br><span class="line"> 	<span class="attr">safari_pinned_tab:</span> <span class="string">/images/logo.svg</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr"> home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">home</span></span><br><span class="line"><span class="attr"> about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">user</span></span><br><span class="line"><span class="attr"> tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">tags</span></span><br><span class="line"> <span class="comment">#categories: /categories/ || th</span></span><br><span class="line"><span class="attr"> archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">archive</span></span><br></pre></td></tr></table></figure>
@@ -498,7 +498,9 @@
 <li>拿到你的appid和appkey之后，打开主题配置文件 搜索 valine，填入appid 和 appkey</li>
 <li>记得在Leancloud -&gt; 设置 -&gt; 安全中心 -&gt; Web 安全域名 把你的域名加进去</li>
 </ol>
-<h1 id="添加标签页"><a href="#添加标签页" class="headerlink" title="添加标签页"></a>添加标签页</h1>
+<h1 id="添加标签页和我的信息页面"><a href="#添加标签页和我的信息页面" class="headerlink" title="添加标签页和我的信息页面"></a>添加标签页和我的信息页面</h1><p>在 <a href>安装并配置主题</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br><span class="line">hexo new page about</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -666,7 +668,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是Hexo"><span class="nav-number">1.</span> <span class="nav-text">什么是Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何安装Hexo"><span class="nav-number">2.</span> <span class="nav-text">如何安装Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置Hexo"><span class="nav-number">3.</span> <span class="nav-text">配置Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装并配置主题"><span class="nav-number">4.</span> <span class="nav-text">安装并配置主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用流程"><span class="nav-number">5.</span> <span class="nav-text">使用流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#博客中插入素材-图片，音乐"><span class="nav-number">6.</span> <span class="nav-text">博客中插入素材(图片，音乐)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#插入图片"><span class="nav-number">6.1.</span> <span class="nav-text">插入图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入音乐"><span class="nav-number">6.2.</span> <span class="nav-text">插入音乐</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#增加评论"><span class="nav-number">7.</span> <span class="nav-text">增加评论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#开启-Valine"><span class="nav-number">7.1.</span> <span class="nav-text">开启 Valine</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加标签页"><span class="nav-number">8.</span> <span class="nav-text">添加标签页</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是Hexo"><span class="nav-number">1.</span> <span class="nav-text">什么是Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何安装Hexo"><span class="nav-number">2.</span> <span class="nav-text">如何安装Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置Hexo"><span class="nav-number">3.</span> <span class="nav-text">配置Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装并配置主题"><span class="nav-number">4.</span> <span class="nav-text">安装并配置主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用流程"><span class="nav-number">5.</span> <span class="nav-text">使用流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#博客中插入素材-图片，音乐"><span class="nav-number">6.</span> <span class="nav-text">博客中插入素材(图片，音乐)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#插入图片"><span class="nav-number">6.1.</span> <span class="nav-text">插入图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入音乐"><span class="nav-number">6.2.</span> <span class="nav-text">插入音乐</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#增加评论"><span class="nav-number">7.</span> <span class="nav-text">增加评论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#开启-Valine"><span class="nav-number">7.1.</span> <span class="nav-text">开启 Valine</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加标签页和我的信息页面"><span class="nav-number">8.</span> <span class="nav-text">添加标签页和我的信息页面</span></a></li></ol></div>
             
 
           </div>
@@ -859,7 +861,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {
